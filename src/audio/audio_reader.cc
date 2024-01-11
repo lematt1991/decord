@@ -58,6 +58,10 @@ namespace decord {
         return numChannels;
     }
 
+    int AudioReader::GetOriginalSampleRate() {
+        return originalSampleRate;
+    }
+
     void AudioReader::GetInfo() {
         std::cout << "audio stream [" << audioStreamIndex << "]: " << std::endl
             << "start time: " << std::endl

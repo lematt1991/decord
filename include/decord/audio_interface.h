@@ -30,6 +30,7 @@ namespace decord {
         virtual double GetDuration() = 0;
         virtual int64_t GetNumSamplesPerChannel() = 0;
         virtual int GetNumChannels() = 0;
+        virtual int GetOriginalSampleRate() = 0;
         virtual void GetInfo() = 0;
     };
 

@@ -20,6 +20,7 @@ namespace decord {
         double GetDuration();
         int64_t GetNumSamplesPerChannel();
         int GetNumChannels();
+        int GetOriginalSampleRate();
         void GetInfo();
     private:
         int Decode(std::string fn, int io_type);

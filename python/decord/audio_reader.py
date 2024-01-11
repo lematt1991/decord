@@ -154,6 +154,10 @@ class AudioReader(object):
         self._duration += self.__get_num_padding() * self.sample_rate
         return self.__get_num_padding()
 
+    def get_original_sample_rate(self):
+        """Return the original sample rate of the audio"""
+        return _CAPI_AudioReaderGetOriginalSampleRate(self._handle)
+
     def get_info(self):
         """Log out the basic info about the audio stream."""
         _CAPI_AudioReaderGetInfo(self._handle)

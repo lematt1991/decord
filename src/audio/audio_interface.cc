@@ -82,6 +82,12 @@ namespace decord {
             static_cast<AudioReaderInterface*>(handle)->GetInfo();
         });
 
+        DECORD_REGISTER_GLOBAL("audio_reader._CAPI_AudioReaderGetOriginalSampleRate")
+        .set_body([](DECORDArgs args, DECORDRetValue* rv) {
+            AudioReaderInterfaceHandle handle = args[0];
+            static_cast<AudioReaderInterface*>(handle)->GetOriginalSampleRate();
+        });
+
         DECORD_REGISTER_GLOBAL("audio_reader._CAPI_AudioReaderFree")
         .set_body([](DECORDArgs args, DECORDRetValue* rv) {
             AudioReaderInterfaceHandle handle = args[0];
